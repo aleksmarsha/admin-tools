@@ -1,6 +1,11 @@
 * {
+	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 ul {
@@ -17,7 +22,7 @@ li {
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: 1fr 5fr;
 	height: 100vh;
 }
 
@@ -27,6 +32,7 @@ li {
 	grid-area: 1 / 1 / span 3 / span 1;
 	color: white;
 	background-color: blue;
+	font-family: 'Inconsolata', monospace;
 }
 
 .main {
@@ -65,3 +71,79 @@ button img {
 	height: 1rem;
 	width: auto;
 }
+
+.upper {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.lower {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.greet {
+	display: grid;
+	grid-template-columns: 1fr 6fr;
+	align-items: end;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(3, 5rem);
+	justify-content: space-evenly;
+	align-items: end;
+}
+
+.buttons button {
+	height: 3rem;
+}
+
+.profileform img:nth-child(1) {
+	height: 2rem;
+	width: auto;
+}
+
+.profileform img:nth-child(2) {
+	height: 3rem;
+	width: 2.5rem;
+	border-radius: 50%;
+}
+
+.lower img {
+	height: 5rem;
+	width: 4.5rem;
+	border-radius: 50%;
+}
+
+.projects {
+	display: grid;
+	grid-template-rows: 1fr 10fr;
+}
+
+.item {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+}
+
+.posts {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.left {
+	display: grid;
+	grid-template-rows: 1fr;
+	align-items: end;
+}
+
+.images {
+	place-self: end;
+}
+
+.images img {
+	height: 2rem;
+	width: auto;
+}
+
