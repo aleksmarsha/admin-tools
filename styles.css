@@ -60,3 +60,8 @@ li img {
 	height: 2rem;
 	width: auto;
 }
+
+button img {
+	height: 1rem;
+	width: auto;
+}
