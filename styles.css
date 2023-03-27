@@ -2,27 +2,27 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
 	-webkit-user-drag: none;
 	-moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
 }
 
-ul {
-	padding: 0;
-}
-
-div {
-	border: 1px solid yellow;
-}
-
 li {
+	display: grid;
+	gap: 15px;
+	grid-template-columns: 1fr 5fr;
+	align-items: center;
+	margin: 5px 0;
 	list-style-type: none;
+	font-size: 1.1rem;
+	font-weight: 800;
 }
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 5fr;
+	grid-template-columns: 1fr 6fr;
 	height: 100vh;
 }
 
@@ -31,20 +31,23 @@ li {
 	grid-template-rows: 1fr 3fr 3fr;
 	grid-area: 1 / 1 / span 3 / span 1;
 	color: white;
-	background-color: blue;
-	font-family: 'Inconsolata', monospace;
+	background-color: #06B6D4;
+	padding-left: 1rem;
 }
 
 .main {
 	display: grid;
 	grid-template-rows: 1fr 3fr;
 	grid-area: 1 / 2 / span 3 / span 1;
-	background-color: orchid;
+	background-color: #FEFCE8;
 }
 
 .header {
 	display: grid;
 	grid-template-rows: 2fr 3fr;
+	background-color: #EDE9FE;
+	padding-left: 10px;
+	border-bottom: 1px solid #064E3B;
 }
 
 .info {
@@ -57,6 +60,58 @@ li {
 	grid-template-rows: repeat(2, 1fr);
 }
 
+.searchform button {
+	justify-self: center;
+	background: none;
+	border: none;
+	height: 1.1rem;
+	width: 1rem;
+}
+
+.searchform {
+	display: grid;
+	align-items: center;
+}
+
+label {
+	display: grid;
+	grid-template-columns: 1fr 7fr;
+}
+
+.sideheader {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	gap: 5px;
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: 900;
+}
+
+input {
+	width: 70%;
+	border: 1px solid #4C1D95;
+	border-radius: 10px;
+	padding-left: 10px;
+}
+
+input:focus {
+	outline: none;
+	border: 1px solid #FBBF24;
+}
+
+.profileform {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: end;
+	align-items: center;
+}
+
+.profileform span {
+	font-size: 1.1rem;
+	font-weight: 800;
+	justify-self: start;
+}
+
 .sideheader img {
 	height: 3rem;
 	width: auto;
@@ -65,16 +120,17 @@ li {
 li img {
 	height: 2rem;
 	width: auto;
+	margin-left: 0.5rem;
 }
 
 button img {
-	height: 1rem;
+	height: 1.1rem;
 	width: auto;
 }
 
 .upper {
 	display: grid;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .lower {
@@ -85,29 +141,56 @@ button img {
 .greet {
 	display: grid;
 	grid-template-columns: 1fr 6fr;
-	align-items: end;
+	align-items: center;
+}
+
+.greet div:nth-child(1) {
+	font-size: 0.9rem;
+	font-weight: 800;
+}
+
+.greet div:nth-child(2) {
+	font-size: 1.7rem;
+	font-weight: 900;
 }
 
 .buttons {
 	display: grid;
-	grid-template-columns: repeat(3, 5rem);
-	justify-content: space-evenly;
-	align-items: end;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
 }
 
 .buttons button {
 	height: 3rem;
+	width: 50%;
+	background-color: #581C87;
+	color: #FDF2F8;
+	border: none;
+	font-size: 1.2rem;
+	font-weight: 800;
+	border-radius: 15px;
+}
+
+.buttons button:hover {
+	background-color: #4C1D95;
+}
+
+.buttons button:active {
+	background-color: #DB2777;
+	outline: 1px solid #60A5FA;
 }
 
 .profileform img:nth-child(1) {
 	height: 2rem;
 	width: auto;
+	justify-self: end;
 }
 
 .profileform img:nth-child(2) {
 	height: 3rem;
 	width: 2.5rem;
 	border-radius: 50%;
+	justify-self: center;
 }
 
 .lower img {
@@ -118,28 +201,56 @@ button img {
 
 .projects {
 	display: grid;
-	grid-template-rows: 1fr 10fr;
+	grid-template-rows: 1fr 11fr;
 }
 
 .item {
 	display: grid;
+	grid-template-columns: 2% 1fr;
+	border-radius: 20px;
+}
+
+.pink {
+	background-color: #FBCFE8;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.velvet {
+	display: grid;
 	grid-template-rows: repeat(3, 1fr);
+	padding-left: 5px;
+	padding-top: 5px;
+	background-color: #FdF4FF;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 
 .posts {
 	display: grid;
+	padding: 0 5px;
+	gap: 10px;
 	grid-template-rows: repeat(3, 1fr);
 	grid-template-columns: repeat(2, 1fr);
 }
 
-.left {
-	display: grid;
-	grid-template-rows: 1fr;
-	align-items: end;
+h2 {
+	font-size: 1.1rem;
 }
 
-.images {
-	place-self: end;
+.content {
+	display: grid;
+	grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+.left {
+	padding-left: 5px;
+}
+
+.left, .right {
+	align-self: end;
+	font-size: 1.2rem;
+	font-weight: 900;
 }
 
 .images img {
@@ -147,3 +258,23 @@ button img {
 	width: auto;
 }
 
+.images {
+	place-self: end;
+}
+
+.trend {
+	display: grid;
+	grid-template-rows: 1fr 5fr;
+}
+
+.users {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	align-items: end;
+}
+
+.users img {
+	height: 3rem;
+	width: 3rem;
+	border-radius: 50%;
+}
